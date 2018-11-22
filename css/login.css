@@ -1,0 +1,31 @@
+#container{
+width:1000px;
+height:1000px;
+padding: 100px 100px 100px 100px;
+background-image: url("https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?auto=compress&cs=tinysrgb&h=350");
+background-color: powderblue;
+}
+
+table#t01,tr,td {
+  text-transform: capitalize;
+  text-indent: 50px;
+  text-color: white;
+}
+
+#box{
+  font-colour: #ffffff;
+	font-family: 'KoHo', sans-serif;
+font-family: 'Lobster', cursive;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-left: 100px;
+	padding-right: 100px;
+  background-image: url("https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?auto=compress&cs=tinysrgb&h=350");
+	background: linear-gradient(90deg, #033c9e, #000d23);
+	box-shadow: 0px 0px 0px 0px;
+border-radius: 200px;
+opacity: 1;
+z-index:-1;
+}
+ 
+

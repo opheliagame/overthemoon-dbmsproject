@@ -1,0 +1,72 @@
+#container{
+  width:900px;
+  background-colour: powderblue;
+}
+#header{
+  height: 110px;
+  text-align: center;
+  font-family: 'Allerta Stencil', sans-serif;
+  background-color: #ddb8b8;
+  padding: 10px 10px 10px 10px;
+  background-image: url("https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?auto=compress&cs=tinysrgb&h=350");
+  text-shadow: 1px 1px #ffffff;
+}
+#navpane{
+  float: left;
+  position: relative;
+  height: 1000px;
+  border-radius: 10px;
+  padding: 1px 1px 1px 1px;
+  margin-right: 2px;
+  margin-left: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  box-sizing: border-box;
+}
+a:link, a:visited {
+    background-color: #109eff;
+  background-image: linear-gradient( 35deg, #ebcdf2, #490459);
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: #109eff;
+}
+#body{
+  background-colour: linen;
+  }
+img {
+  width: 300px;
+  margin: 5px 5px 5px 5px;
+  border-radius: 50px;
+  position: relative;
+ 
+img:hover {
+  opacity: 0.5;
+  background-colour: #ffffff;
+}
+
+
+
+  
+  .column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  margin: 10px 10px 10px 10px;
+}
+  
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+  
+  
+

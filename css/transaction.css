@@ -1,0 +1,15 @@
+#header{
+  font-family: 'Rock Salt', cursive;
+  background-image: url("https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?auto=compress&cs=tinysrgb&h=350");
+ letter-spacing: 3px;
+  font-size: 30px;
+   height: 100px;
+  width: 1200px;
+  text-align: center;
+  background-color: #ddb8b8;
+}
+
+.container{
+  background-image: repeating-linear-gradient(#ced5e0, #ffffff 20%, #5f9bfc 30%);
+}
+

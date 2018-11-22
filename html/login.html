@@ -3,36 +3,22 @@
 <link href="login.css" rel="stylesheet" type="text/css">
   </head>
 <body>
- 
+
 <div id="container">
 
 	<div id="box">
-	<form>
-   
+	<form class="form-group" action="func.php" method="post">
+
 		<pre style="color: white;">
-    
-			 username  <input type="textbox"  id ="username"/></br>
-			 Password  <input type="password" id ="password"/></br>
-			
-			 <input type="button" onclick="fun()" value="Submit"/>
-			
+
+			 username  <input type="text"  name="admin" class="form-control" placeholder="username"/></br>
+			 Password  <input type="password" name="password" class ="form-control" placeholder="password"/></br>
+
+			 <input type="submit" name="login_submit" value="Login" class="btn btn-primary"/>
+
 		</pre>
 	</form>
 	</div>
 </div>
-<script>
-		function fun()
-		{
-			if(document.getElementById("username").value=="abc")
-			{
-				if(document.getElementById("pass").value=="123")
-					alert("login Success");
-				else
-					alert("password incorrect");
-			}
-			else
-				alert("username incorrect");
-		}
-	</script>
 </body>
 </html>

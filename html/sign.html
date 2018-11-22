@@ -5,34 +5,21 @@
 </head>
 <body>
   <div id="container">
-   <div id="box"> 
-<table id="t01">
 
-	<tr>
-		<td>Username</td>
-		<td><input type="textbox"/></td>
-	</tr>
-	<tr>
-		<td>Password</td>
-		<td><input type="password"/></td>
-	</tr>
+  	<div id="box">
 
-	<tr>
-		<td>Email</td>
-		<td><input type="email"/></td>
-	</tr>
-	
-	<tr>
-		<td>Phone No.</td>
-		<td><input type="textbox"/></td>
-	</tr>
-	
-	<tr>
-		<td><input type="Submit"/></td>
-		<td><input type="Reset"/></td>
-	</tr>
-</table>
-    </div>
-  </div>
+  <form class="form-group" action="func.php" method="post">
+
+    <pre style="color: white;">
+
+       username  <input type="text"  name="username" class="form-control" placeholder="username"/></br>
+       Password  <input type="password" name="password" class ="form-control" placeholder="password"/></br>
+       Email  <input type="email" name="email" class ="form-control" placeholder="email"/></br>
+       Phone  <input type="text" name="phone" class ="form-control" placeholder="phone number"/></br>
+       <input class="submit" type="submit" name="submit" value="submit" class="btn btn-primary"/>
+     </pre>
+</form>
+</div>
+</div>
 </body>
 </html>

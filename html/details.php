@@ -24,87 +24,84 @@ else if(isset($_GET['linkmarvel'])) {
   </head>
   <body>
     <div id="transc">
-      FOOD
-      <br>
-      <input id="food1" type="radio" name="food" value=""><br>
-      <input id="food2" type="radio" name="food" value=""><br>
-      <input id="food3" type="radio" name="food" value=""><br>
-
-
-      <?php
-      $sql="SELECT * FROM FOOD WHERE THEMEID='$themeid';";
-      $result=mysqli_query($con,$sql);
-      $resultcheck=mysqli_num_rows($result);
-      if($resultcheck > 0)
-      {
-        while($row=mysqli_fetch_assoc($result)){
-
-          echo $row['ITEM']. " $" . $row['PRICE'] ."<br>";
+      <div class="food">
+        FOOD
+        <br>
+        <?php
+        $sql="SELECT * FROM FOOD WHERE THEMEID='$themeid';";
+        $result=mysqli_query($con,$sql);
+        $resultcheck=mysqli_num_rows($result);
+        $id = 1;
+        if($resultcheck > 0)
+        {
+          while($row=mysqli_fetch_assoc($result)){
+            echo '<input id="food'.$id . '" type="radio" name="food"><br>';
+            echo $row['ITEM']. " $" . $row['PRICE'] ."<br>";
+            $id = $id + 1;
+          }
+          
         }
-        
-      }
-      ?>
+        ?>
+      </div>
 
-    VENUE<br>
-    <input id="venue1" type="radio" name="venue" value=""><br>
-    <input id="venue2" type="radio" name="venue" value=""><br>
-    <input id="venue3" type="radio" name="venue" value=""><br>
+      <div class="venue">
+        VENUE<br>
+        <?php
+          $sql="SELECT * FROM VENUE WHERE THEMEID='$themeid';";
+          $result=mysqli_query($con,$sql);
+          $resultcheck=mysqli_num_rows($result);
+          $id = 1;
+          if($resultcheck > 0)
+          {
+            while($row=mysqli_fetch_assoc($result)){
+              echo '<input id="venue'.$id . '" type="radio" name="venue"><br>';
+              echo $row['ITEM']. " $" . $row['PRICE'] ."<br>";
+              $id = $id + 1;
+            }
+            
+          }
+        ?>
+      </div>
 
-    <?php
-      $sql="SELECT * FROM VENUE WHERE THEMEID='$themeid';";
-      $result=mysqli_query($con,$sql);
-      $resultcheck=mysqli_num_rows($result);
-      if($resultcheck > 0)
-      {
-        while($row=mysqli_fetch_assoc($result)){
+      <div class="decorations">
+        DECORATIONS
+        <br>
+        <?php
+          $sql="SELECT * FROM DECORATIONS WHERE THEMEID='$themeid';";
+          $result=mysqli_query($con,$sql);
+          $resultcheck=mysqli_num_rows($result);
+          $id = 1;
+          if($resultcheck > 0)
+          {
+            while($row=mysqli_fetch_assoc($result)){
+              echo '<input id="deco'.$id . '" type="radio" name="decorations"><br>';
+              echo $row['ITEM']. " $" . $row['PRICE'] ."<br>";
+              $id = $id + 1;
+            }
+            
+          }
+        ?>
+      </div>
 
-          echo $row['ITEM']. " $" . $row['PRICE'] ."<br>";
-        }
-        
-      }
-      ?>
-    DECORATIONS
-    <br>
-    <input id="deco1" type="radio" name="decorations" value=""><br>
-    <input id="deco2" type="radio" name="decorations" value=""><br>
-    <input id="deco3" type="radio" name="decorations" value=""><br>
-
-    <?php
-      $sql="SELECT * FROM DECORATIONS WHERE THEMEID='$themeid';";
-      $result=mysqli_query($con,$sql);
-      $resultcheck=mysqli_num_rows($result);
-      if($resultcheck > 0)
-      {
-        while($row=mysqli_fetch_assoc($result)){
-
-          echo $row['ITEM']. " $" . $row['PRICE'] ."<br>";
-        }
-        
-      }
-      ?>
-
-    ENTERTAINMENT
-    <br>
-    <input id="entn1" type="radio" name="entertainment" value=""><br>
-    <input id="entn2" type="radio" name="entertainment" value=""><br>
-    <input id="entn3" type="radio" name="entertainment" value=""><br>
-
-    <?php
-      $sql="SELECT * FROM ENTERTAINMENT WHERE THEMEID='$themeid';";
-      $result=mysqli_query($con,$sql);
-      $resultcheck=mysqli_num_rows($result);
-      if($resultcheck > 0)
-      {
-        while($row=mysqli_fetch_assoc($result)){
-
-          echo $row['ITEM']. " $" . $row['PRICE'] ."<br>";
-        }
-        
-      }
-      ?>
-
-      
-
+      <div class="entertainment">
+        ENTERTAINMENT
+        <br>
+        <?php
+          $sql="SELECT * FROM ENTERTAINMENT WHERE THEMEID='$themeid';";
+          $result=mysqli_query($con,$sql);
+          $resultcheck=mysqli_num_rows($result);
+          $id = 1;
+          if($resultcheck > 0)
+          {
+            while($row=mysqli_fetch_assoc($result)){
+              echo '<input id="entn'.$id . '" type="radio" name="entertainment"><br>';
+              echo $row['ITEM']. " $" . $row['PRICE'] ."<br>";
+              $id = $id+1;
+            }
+            
+          }
+        ?>
+      </div>
     </div>
 
     <script type="text/javascript">

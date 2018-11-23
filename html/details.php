@@ -2,6 +2,18 @@
 
 include_once '../php/func.php';
 
+$themeid;
+
+if(isset($_GET['linkkitty'])) {
+  $themeid = 1;
+}
+else if(isset($_GET['linkfrozen'])) {
+  $themeid = 3;
+}
+else if(isset($_GET['linkmarvel'])) {
+  $themeid = 2;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +32,7 @@ include_once '../php/func.php';
 
 
       <?php
-      $sql="SELECT * FROM FOOD WHERE THEMEID=1;";
+      $sql="SELECT * FROM FOOD WHERE THEMEID='$themeid';";
       $result=mysqli_query($con,$sql);
       $resultcheck=mysqli_num_rows($result);
       if($resultcheck > 0)
@@ -39,7 +51,7 @@ include_once '../php/func.php';
     <input id="venue3" type="radio" name="venue" value=""><br>
 
     <?php
-      $sql="SELECT * FROM VENUE WHERE THEMEID=1;";
+      $sql="SELECT * FROM VENUE WHERE THEMEID='$themeid';";
       $result=mysqli_query($con,$sql);
       $resultcheck=mysqli_num_rows($result);
       if($resultcheck > 0)
@@ -58,7 +70,7 @@ include_once '../php/func.php';
     <input id="deco3" type="radio" name="decorations" value=""><br>
 
     <?php
-      $sql="SELECT * FROM DECORATIONS WHERE THEMEID=1;";
+      $sql="SELECT * FROM DECORATIONS WHERE THEMEID='$themeid';";
       $result=mysqli_query($con,$sql);
       $resultcheck=mysqli_num_rows($result);
       if($resultcheck > 0)
@@ -78,7 +90,7 @@ include_once '../php/func.php';
     <input id="entn3" type="radio" name="entertainment" value=""><br>
 
     <?php
-      $sql="SELECT * FROM ENTERTAINMENT WHERE THEMEID=1;";
+      $sql="SELECT * FROM ENTERTAINMENT WHERE THEMEID='$themeid';";
       $result=mysqli_query($con,$sql);
       $resultcheck=mysqli_num_rows($result);
       if($resultcheck > 0)
